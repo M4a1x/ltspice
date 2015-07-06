@@ -1,0 +1,2 @@
+# ltspice
+LTspiceIV unmodified redistribution.
