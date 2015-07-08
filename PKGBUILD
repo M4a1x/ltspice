@@ -25,7 +25,7 @@ package()
 
     # Install binary files to /opt
     mkdir -p "$pkgdir/opt/$pkgname"
-    cp -r "$srcdir/$pkgname" "$pkgdir/opt/$pkgname"
+    cp -r "$srcdir/$pkgname" "$pkgdir/opt"
     chmod 755 -R "$pkgdir/opt/$pkgname"
 
     #Install /usr/bin startscript

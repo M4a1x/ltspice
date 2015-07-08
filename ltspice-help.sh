@@ -8,4 +8,4 @@
 #fi
 #WINEDEBUG=-all wine /opt/LTspiceIV/scad3.exe -ini scad3.ini "$@"
 
-wine /opt/LTspiceIV/LTspiceHelp.chm "$@"
+wine /opt/ltspice/LTspiceHelp.chm "$@"
