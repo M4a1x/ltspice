@@ -12,13 +12,16 @@ makedepends=('git')
 source=("$pkgname::git+https://github.com/M4a1x/$pkgname.git#branch=$pkgver"
         "$pkgname.sh"
         "$pkgname-help.sh")
-md5sums=('SKIP'
-        'SKIP'
-        'SKIP')
+sha256sums=('SKIP'
+            'd7639a3dc2d4718208ad34bb9a2ac9af78ea6b2afe96f6b540ae8fd06bc169f3'
+            '89c7cd81caf3109fcb93aa485d6d164b868fb264ab996b2dc939fb2bb56034cd')
 #install=ltspice.install
 
 package()
 {
+    # Remove git files
+    rm -rf "$srcdir/.git"
+
     # Install License
     install -D -m644 "$srcdir/$pkgname/License.txt" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
     rm -f "$srcdir/$pkgname/License.txt"
