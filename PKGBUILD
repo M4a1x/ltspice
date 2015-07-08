@@ -9,7 +9,7 @@ url="http://www.linear.com/"
 license=('custom')
 depends=('wine')
 makedepends=('git')
-source=("ltspice::git+https://github.com/M4a1x/ltspice.git#branch=$pkgname"
+source=("ltspice::git+https://github.com/M4a1x/ltspice.git#branch=$pkgver"
         "$pkgname.sh")
 md5sums=('SKIP'
         'e4201f86691af79e7312f22a3fa2a2f1')
