@@ -2,7 +2,7 @@
 
 if [ -z "$1" ]
   then
-    echo "No argument supplied. First argument must be LTspiceIV.exe"
+    echo "No argument supplied. First argument must be LTspiceIV.exe installation file"
     exit -1
 fi
 
