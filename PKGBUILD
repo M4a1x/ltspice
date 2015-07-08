@@ -12,7 +12,8 @@ makedepends=('git')
 source=("$pkgname::git+https://github.com/M4a1x/$pkgname.git#branch=$pkgver"
         "$pkgname.sh")
 md5sums=('SKIP'
-        'e4201f86691af79e7312f22a3fa2a2f1')
+        '47721d4d86a9af1895b1faa786c9a344'
+        'b2fc547f37bd2a13d3e2e42c667dc13b')
 #install=ltspice.install
 
 package()
