@@ -9,7 +9,7 @@ url="http://www.linear.com/"
 license=('custom')
 depends=('wine')
 makedepends=('git')
-source=("ltspice::git+https://github.com/M4a1x/ltspice.git#branch=$pkgver"
+source=("$pkgname::git+https://github.com/M4a1x/$pkgname.git#branch=$pkgver"
         "$pkgname.sh")
 md5sums=('SKIP'
         'e4201f86691af79e7312f22a3fa2a2f1')
@@ -18,12 +18,15 @@ md5sums=('SKIP'
 package()
 {
     # Install License
-    install -m 755 "$srcdir/$pkgname/License.txt" "/usr/share/licenses/$pkgname"
+    install -D -m644 "$srcdir/$pkgname/License.txt" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
     rm -f "$srcdir/$pkgname/License.txt"
 
     # Install binary files to /opt
-    install -m 644 "$srcdir/$pkgname" "$pkgdir/opt/$pkgname"
+    mkdir -p "$pkgdir/opt/$pkgname"
+    cp -r "$srcdir/$pkgname" "$pkgdir/opt/$pkgdir"
+    chmod 755 -R "$pkgdir/opt/$pkgdir"
 
     #Install /usr/bin startscript
     install -Dm755 "$pkgname.sh" "$pkgdir/usr/bin/$pkgname"
+    install -Dm755 "$pkgname-help.sh" "$pkgdir/usr/bin/$pkgname-help"
 }
